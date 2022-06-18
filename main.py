@@ -1,14 +1,89 @@
 # IMPORTING LIBRARIES
 import tkinter
 from tkinter import messagebox
+import random
+import pyperclip
 
 # CONSTANTS
 LOGO_FILE_PATH = "images/logo.png"
 LOGO_HEIGHT = 200
 LOGO_WIDTH = 200
 PASSWORD_DATA_FILE = "data.txt"
+LETTERS = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+]
+NUMBERS = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+SYMBOLS = ["!", "#", "$", "%", "&", "(", ")", "*", "+"]
 
-# ---------------------------- PASSWORD GENERATOR ------------------------------- #
+# PASSWORD GENERATOR
+def password_generator():
+    password_entry.delete(0, tkinter.END)
+    num_letters = random.randint(6, 10)
+    num_symbols = random.randint(2, 6)
+    num_numbers = random.randint(2, 6)
+
+    letter_list = [random.choice(LETTERS) for i in range(num_letters)]
+    symbol_list = [random.choice(SYMBOLS) for i in range(num_symbols)]
+    number_list = [random.choice(NUMBERS) for i in range(num_numbers)]
+
+    password_list = letter_list + symbol_list + number_list
+    random.shuffle(password_list)
+    password = "".join(password_list)
+    password_entry.insert(0, password)
+    pyperclip.copy(password)
+    return
+
 
 # SAVE PASSWORD
 def save_password():
@@ -17,7 +92,7 @@ def save_password():
     password = password_entry.get()
 
     add_message = f"Details:\nEmail: {id}\nPassword: {password}"
-    empty_message = "Do not leave fields blank!"
+    empty_message = "Do not leave the fields blank!"
 
     if (len(website) == 0) or (len(password) == 0) or (len(id) == 0):
         messagebox.showwarning(title="Warning", message=empty_message)
@@ -59,21 +134,21 @@ password_label = tkinter.Label(text="Password:")
 password_label.grid(row=3, column=0)
 
 # WEBSITE ENTRY
-website_entry = tkinter.Entry()
+website_entry = tkinter.Entry(width=40)
 website_entry.grid(row=1, column=1)
 
 # ID ENTRY
-id_entry = tkinter.Entry()
+id_entry = tkinter.Entry(width=40)
 id_entry.insert(0, "abc@xyz.com")
 id_entry.grid(row=2, column=1)
 
 # PASSWORD ENTRY
-password_entry = tkinter.Entry()
+password_entry = tkinter.Entry(width=40)
 password_entry.grid(row=3, column=1)
 
 # PASSWORD GENERATOR BUTTON
-password_button = tkinter.Button(text="Generate Password")
-password_button.grid(row=3, column=2)
+password_button = tkinter.Button(text="Generate Password", command=password_generator)
+password_button.grid(row=4, column=2)
 
 # ADD BUTTON
 add_button = tkinter.Button(text="Add", command=save_password)
