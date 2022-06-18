@@ -1,0 +1,3 @@
+XYZ | abc@xyz.com | heyJude123 
+Amazon | abc@amazon.com | yoyofree333 
+Google | abc@google.com | googlERRRR 
