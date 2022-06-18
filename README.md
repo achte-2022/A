@@ -6,7 +6,7 @@
 
 A GUI based Password Manager. 
 
-This Application:
+This Application:  
     * can store passwords  
     * search for entries.  
     * generate passwords.  
