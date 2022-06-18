@@ -7,11 +7,11 @@
 A GUI based Password Manager. 
 
 This Application:
-    * can store passwords__
-    * search for entries.__
-    * generate passwords.__
-    * copy the generated password automatically to the clipboard.__
-    * data is stored in .JSON format.__
+    * can store passwords  
+    * search for entries.  
+    * generate passwords.  
+    * copy the generated password automatically to the clipboard.  
+    * data is stored in .JSON format.  
 
 ## Requirements
 
