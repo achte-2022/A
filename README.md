@@ -11,7 +11,7 @@ This Application:
     * search for entries.  
     * generate passwords.  
     * copy the generated password automatically to the clipboard.  
-    * data is stored in .JSON format.  
+    * stores data in .JSON format.  
 
 ## Requirements
 
@@ -55,5 +55,8 @@ $ python3 main.py
 ### File not found Screen
 ![](images/file_not_found.png)
 
-### Entry not found Screen
-![](images/entry_not_found.png)
+### Entry found Screen
+![](images/entry_found.png)
+
+### Entry add confirmation Screen
+![](images/entry_confirm.png)

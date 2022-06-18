@@ -6,5 +6,9 @@
     "Google": {
         "Email": "abc@google.com",
         "Password": "22$EP62*Kr%Y5wJ"
+    },
+    "Facebook": {
+        "Email": "abc@facebook.com",
+        "Password": "*!Il53rYh#W+!kT"
     }
 }

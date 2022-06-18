@@ -12,6 +12,10 @@ LOGO_FILE_PATH = "images/logo.png"
 LOGO_HEIGHT = 200
 LOGO_WIDTH = 200
 PASSWORD_DATA_FILE = "data.json"
+ORANGE = "#F15412"
+BLACK = "#000000"
+BLUE = "#34B3F1"
+FONT = ("Courier", 15, "bold")
 LETTERS = [
     "a",
     "b",
@@ -156,25 +160,27 @@ def find_password():
 # UI SETUP
 window = tkinter.Tk()
 window.title("Password Manager")
-window.config(padx=30, pady=30)
+window.config(padx=30, pady=30, bg=BLUE)
 
 # CANVAS
-canvas = tkinter.Canvas(width=LOGO_WIDTH, height=LOGO_HEIGHT)
+canvas = tkinter.Canvas(
+    width=LOGO_WIDTH, height=LOGO_HEIGHT, bg=BLUE, highlightthickness=0
+)
 logo = tkinter.PhotoImage(file=LOGO_FILE_PATH)
 canvas.create_image(LOGO_WIDTH / 2, LOGO_HEIGHT / 2, image=logo)
 canvas.grid(row=0, column=1)
 
 # WEBSITE LABEL
-website_label = tkinter.Label(text="Website:")
+website_label = tkinter.Label(text="Website:", font=FONT, bg=BLUE, fg=ORANGE)
 website_label.focus()
 website_label.grid(row=1, column=0)
 
 # ID LABEL
-id_label = tkinter.Label(text="Email/Username:")
+id_label = tkinter.Label(text="Email/Username:", font=FONT, bg=BLUE, fg=ORANGE)
 id_label.grid(row=2, column=0)
 
 # PASSWORD LABEL
-password_label = tkinter.Label(text="Password:")
+password_label = tkinter.Label(text="Password:", font=FONT, bg=BLUE, fg=ORANGE)
 password_label.grid(row=3, column=0)
 
 # WEBSITE ENTRY
@@ -191,15 +197,21 @@ password_entry = tkinter.Entry(width=40)
 password_entry.grid(row=3, column=1)
 
 # PASSWORD GENERATOR BUTTON
-password_button = tkinter.Button(text="Generate Password", command=password_generator)
+password_button = tkinter.Button(
+    text="Generate Password", command=password_generator, font=FONT, bg=BLUE, fg=ORANGE
+)
 password_button.grid(row=4, column=2)
 
 # ADD BUTTON
-add_button = tkinter.Button(text="Add", command=save_password)
+add_button = tkinter.Button(
+    text="Add", command=save_password, font=FONT, bg=BLUE, fg=ORANGE
+)
 add_button.grid(row=4, column=1)
 
 # SEARCH BUTTON
-search_button = tkinter.Button(text="SEARCH", command=find_password)
+search_button = tkinter.Button(
+    text="SEARCH", command=find_password, font=FONT, bg=BLUE, fg=ORANGE
+)
 search_button.grid(row=2, column=2)
 
 window.mainloop()
