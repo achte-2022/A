@@ -197,19 +197,19 @@ password_entry.grid(row=3, column=1)
 
 # PASSWORD GENERATOR BUTTON
 password_button = tkinter.Button(
-    text="Generate Password", command=password_generator, font=FONT, bg=BLUE, fg=ORANGE
+    text="Generate Password", command=password_generator, font=FONT, bg=BLUE, fg=BLACK
 )
 password_button.grid(row=4, column=2)
 
 # ADD BUTTON
 add_button = tkinter.Button(
-    text="Add", command=save_password, font=FONT, bg=BLUE, fg=ORANGE
+    text="Add", command=save_password, font=FONT, bg=BLUE, fg=BLACK
 )
 add_button.grid(row=4, column=1)
 
 # SEARCH BUTTON
 search_button = tkinter.Button(
-    text="SEARCH", command=find_password, font=FONT, bg=BLUE, fg=ORANGE
+    text="SEARCH", command=find_password, font=FONT, bg=BLUE, fg=BLACK
 )
 search_button.grid(row=2, column=2)
 
