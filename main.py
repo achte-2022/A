@@ -152,7 +152,7 @@ def find_password():
                 id = data_entry["Email"]
                 password = data_entry["Password"]
                 entry_message = f"Details:\nEmail: {id}\nPassword: {password}"
-                messagebox.showwarning(title="Entry Found", message=entry_message)
+                messagebox.showinfo(title="Entry Found", message=entry_message)
     return
 
 
