@@ -49,13 +49,10 @@ $ python3 main.py
 ### Password Generation Screen
 ![](images/pw_generate.png)
 
-### Search Screen
-![](images/search.png)
-
 ### File not found Screen
 ![](images/file_not_found.png)
 
-### Entry found Screen
+### Search Screen
 ![](images/entry_found.png)
 
 ### Entry add confirmation Screen
