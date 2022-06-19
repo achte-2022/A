@@ -2,7 +2,7 @@
 import tkinter
 from tkinter import messagebox
 import random
-# import pyperclip
+import pyperclip
 import json
 
 
@@ -87,7 +87,7 @@ def password_generator():
     random.shuffle(password_list)
     password = "".join(password_list)
     password_entry.insert(0, password)
-    # pyperclip.copy(password)
+    pyperclip.copy(password)
     return
 
 
